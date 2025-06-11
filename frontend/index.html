@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>Sample Frontend</title></head>
+<body>
+  <h1>Sample Frontend</h1>
+  <div id="time"></div>
+  <script>
+    fetch("/api/time").then(r => r.json()).then(j => {
+      document.getElementById("time").innerText = "Server time: " + j.time;
+    });
+  </script>
+</body>
+</html>
