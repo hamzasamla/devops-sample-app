@@ -4,15 +4,15 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.backend
-    container_name: sample-backend
+    container_name: container-backend
     ports:
       - "3000:3000"
   frontend:
     build:
       context: .
       dockerfile: Dockerfile.frontend
-    container_name: sample-frontend
+    container_name: container-frontend
     ports:
-      - "80:80"
+      - "8080:80"
     depends_on:
       - backend
